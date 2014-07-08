@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:assitant="http://schemas.android.com/apk/res/com.example.hassistant"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_main_view_linearlayout_padding" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:background="@drawable/shape_frame_1" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/activity_main_view_tablelayout_margin_top"
+        android:layout_weight="2"
+        android:background="@drawable/shape_frame_1" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <com.example.assistant.main.MainWidget
+                android:id="@+id/item_quests"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_main_item"
+                android:orientation="vertical"
+                android:padding="@dimen/activity_main_view_item_padding"
+                assitant:src="@drawable/main_icon_quests"
+                assitant:text="@string/activity_main_view_item_quest" >
+            </com.example.assistant.main.MainWidget>
+
+            <com.example.assistant.main.MainWidget
+                android:id="@+id/item_album"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_main_item"
+                android:orientation="vertical"
+                android:padding="@dimen/activity_main_view_item_padding"
+                assitant:src="@drawable/main_icon_album"
+                assitant:text="@string/activity_main_view_item_album" >
+            </com.example.assistant.main.MainWidget>
+
+            <com.example.assistant.main.MainWidget
+                android:id="@+id/item_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_main_item"
+                android:orientation="vertical"
+                android:padding="@dimen/activity_main_view_item_padding"
+                assitant:src="@drawable/main_icon_message"
+                assitant:text="@string/activity_main_view_item_message" >
+            </com.example.assistant.main.MainWidget>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <com.example.assistant.main.MainWidget
+                android:id="@+id/item_telephone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_main_item"
+                android:orientation="vertical"
+                android:padding="@dimen/activity_main_view_item_padding" 
+                assitant:src="@drawable/main_icon_telephone"
+                assitant:text="@string/activity_main_view_item_telephone">
+            </com.example.assistant.main.MainWidget>
+
+            <com.example.assistant.main.MainWidget
+                android:id="@+id/item_share"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_main_item"
+                android:orientation="vertical"
+                android:padding="@dimen/activity_main_view_item_padding"
+                assitant:src="@drawable/main_icon_share"
+                assitant:text="@string/activity_main_view_item_share" >
+            </com.example.assistant.main.MainWidget>
+
+            <com.example.assistant.main.MainWidget
+                android:id="@+id/item_setting"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_main_item"
+                android:orientation="vertical"
+                android:padding="@dimen/activity_main_view_item_padding"
+                assitant:src="@drawable/main_icon_setting"
+                assitant:text="@string/activity_main_view_item_setting" >
+            </com.example.assistant.main.MainWidget>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

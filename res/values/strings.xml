@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">北风助手</string>
+    <string name="activity_login_copright">版权所有盗版必究</string>
+    <string name="action_settings">Settings</string>
+    <string name="activity_login_edittext_username">请输入用户名</string>
+    <string name="activity_lgoin_edittext_password">请输入密码</string>
+    <string name="activity_lgoin_title_text">登入</string>
+    <string name="activity_main_title_text">北风助手</string>
+    <string name="activity_main_view_item_quest">阶段测试</string>
+    <string name="activity_main_view_item_album">学习相册</string>
+    <string name="activity_main_view_item_message">消息提问</string>
+    <string name="activity_main_view_item_telephone">电话支持</string>
+    <string name="activity_main_view_item_share">经验分享</string>
+    <string name="activity_main_view_item_setting">系统设置</string>
+    <string name="title_message">消息提问</string>
+    <string name="title_phone">电话支持</string>
+    <string name="dialog_message_label_phone">电话号码</string>
+    <string name="dialog_message_label_message_content">消息内容</string>
+    <string name="dialog_message_hint_content">请在此处输入消息内容</string>
+    <string name="dialog_message_button_send">发送</string>
+    <string name="dialog_message_button_cancle">取消</string>
+    <string name="dialog_message_send_successed">消息成功发送到：</string>
+    <string name="dialog_message_send_no_input">消息内容不能为空</string>
+
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MainWidget">
+        <attr name="src" format="reference|color" />
+        <attr name="text" format="string" localization="suggested" />
+    </declare-styleable>
+
+</resources>
