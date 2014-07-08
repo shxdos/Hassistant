@@ -7,11 +7,20 @@
     android:orientation="vertical"
     android:padding="@dimen/activity_main_view_linearlayout_padding" >
 
-    <ImageView
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="3"
-        android:background="@drawable/shape_frame_1" />
+        android:background="@drawable/shape_frame_2" >
+
+        <android.support.v4.view.PagerTitleStrip
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_frame_1"
+            android:layout_gravity="bottom" 
+            />
+    </android.support.v4.view.ViewPager>
 
     <TableLayout
         android:layout_width="match_parent"
@@ -74,9 +83,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/selector_main_item"
                 android:orientation="vertical"
-                android:padding="@dimen/activity_main_view_item_padding" 
+                android:padding="@dimen/activity_main_view_item_padding"
                 assitant:src="@drawable/main_icon_telephone"
-                assitant:text="@string/activity_main_view_item_telephone">
+                assitant:text="@string/activity_main_view_item_telephone" >
             </com.example.assistant.main.MainWidget>
 
             <com.example.assistant.main.MainWidget

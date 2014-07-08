@@ -19,4 +19,6 @@
     <dimen name="dialog_message_item_padding">10dp</dimen>
 	<dimen name="dialog_message_btnbar_marin_up_down">10dp</dimen>
 	<dimen name="dialog_message_btnbar_marin_left_right">5dp</dimen>
+	<dimen name="dialog_phone_item_phone_padding">10dp</dimen>
+	<dimen name="dialog_phone_item_padding">10dp</dimen>
 </resources>

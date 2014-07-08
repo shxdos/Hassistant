@@ -5,6 +5,6 @@ package com.example.assistant.phone;
  *
  */
 public class PhoneInfo {
-private String name;//支持电话名
-private String number;//电话号码
+public String name;//支持电话名
+public String number;//电话号码
 }

@@ -1,11 +1,14 @@
 package com.example.assistant.main;
 
 import com.example.assistant.message.MessageDialog;
+import com.example.assistant.phone.PhoneDialog;
+import com.example.assistant.phone.PhoneInfo;
 import com.example.hassistant.R;
 
 import android.app.Activity;
 import android.app.Dialog;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -18,6 +21,8 @@ public class MainViewActivity extends Activity implements OnClickListener{
 	private TextView titleText;
 	private ImageButton titleLeft;
 	private ImageButton titleRight;
+	private ViewPager viewPager;//头部滑动页面
+	private MainAdapter adapter;//头部滑动页面适配器
 	private MainWidget quests;//阶段测试
 	private MainWidget album;//学习相册
 	private MainWidget message;//消息提问
@@ -34,6 +39,7 @@ public class MainViewActivity extends Activity implements OnClickListener{
 		setContentView(R.layout.activity_main_view);
 		initTitle();
 		initView();
+		initPager();
 	}
 
 	// 初始化标题栏
@@ -63,7 +69,11 @@ public class MainViewActivity extends Activity implements OnClickListener{
 		share.setOnClickListener(this);
 		setting.setOnClickListener(this);
 	}
-
+	private void initPager(){
+		viewPager=(ViewPager) findViewById(R.id.viewPager);
+		adapter=new MainAdapter();
+		viewPager.setAdapter(adapter);
+	}
 	@Override
 	protected void onDestroy() {
 		// TODO Auto-generated method stub
@@ -81,6 +91,7 @@ public class MainViewActivity extends Activity implements OnClickListener{
 		}else if(v==album){
 			
 		}else if(v==message){
+			//消息支持
 			//避免多次点击多次弹出
 			if(null!=dialog){
 				if(dialog.isShowing()){
@@ -93,7 +104,24 @@ public class MainViewActivity extends Activity implements OnClickListener{
 			dialog=new MessageDialog(this,"13341194865");
 			dialog.show();
 		}else if(v==telephone){
-			
+			PhoneInfo[] infos=new PhoneInfo[3];
+			for(int i=0;i<3;i++){
+				infos[i]=new PhoneInfo();
+				infos[i].name="电话支持"+i;
+				infos[i].number="13341195865";
+			}
+			//电话支持
+			//避免多次点击多次弹出
+			if(null!=dialog){
+				if(dialog.isShowing()){
+					if(dialog.getClass()==PhoneDialog.class){
+						return;
+					}
+					dialog.dismiss();
+				}
+			}
+			dialog=new PhoneDialog(this,infos);
+			dialog.show();
 		}else if(v==share){
 			
 		}else if(v==setting){
