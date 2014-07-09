@@ -29,6 +29,10 @@
         </activity>
         <activity android:name="com.example.assistant.main.MainViewActivity" >
         </activity>
+        <activity android:name="com.example.assistant.quest.QuestActivity" >
+        </activity>
+        <activity android:name="com.example.assistant.album.AlbumActivity" >
+        </activity>
     </application>
 
 </manifest>

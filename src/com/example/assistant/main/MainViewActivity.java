@@ -1,17 +1,22 @@
 package com.example.assistant.main;
 
+import com.example.assistant.album.AlbumActivity;
 import com.example.assistant.message.MessageDialog;
 import com.example.assistant.phone.PhoneDialog;
 import com.example.assistant.phone.PhoneInfo;
+import com.example.assistant.quest.QuestActivity;
 import com.example.hassistant.R;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
+import android.view.WindowManager.LayoutParams;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -72,6 +77,20 @@ public class MainViewActivity extends Activity implements OnClickListener{
 	private void initPager(){
 		viewPager=(ViewPager) findViewById(R.id.viewPager);
 		adapter=new MainAdapter();
+		View v=new View(this);
+		v.setLayoutParams(new LayoutParams(-1,-1));
+		v.setBackgroundColor(Color.WHITE);
+		
+		View v2=new View(this);
+		v2.setLayoutParams(new LayoutParams(-1,-1));
+		v2.setBackgroundColor(Color.RED);
+		
+		View v3=new View(this);
+		v3.setLayoutParams(new LayoutParams(-1,-1));
+		v3.setBackgroundColor(Color.GREEN);
+		adapter.addItem("第一页", v);
+		adapter.addItem("第二页", v2);
+		adapter.addItem("第三页", v3);
 		viewPager.setAdapter(adapter);
 	}
 	@Override
@@ -85,11 +104,14 @@ public class MainViewActivity extends Activity implements OnClickListener{
 
 	@Override
 	public void onClick(View v) {
-		//Toast.makeText(this, v.toString(), Toast.LENGTH_SHORT).show();
+		//阶段测试
 		if(v==quests){
-			
+			Intent intent=new Intent(MainViewActivity.this,QuestActivity.class);
+			startActivity(intent);
 		}else if(v==album){
-			
+			//学习相册
+			Intent intent=new Intent(MainViewActivity.this,AlbumActivity.class);
+			startActivity(intent);
 		}else if(v==message){
 			//消息支持
 			//避免多次点击多次弹出

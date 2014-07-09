@@ -5,6 +5,8 @@
     <dimen name="activity_main_view_linearlayout_padding">10dp</dimen>
     <dimen name="activity_main_view_tablelayout_margin_top">10dp</dimen>
     <dimen name="activity_main_view_item_padding">10dp</dimen>
+    <dimen name="activity_main_view_pager_strip_padding_left_right">10dp</dimen>
+    <dimen name="activity_main_view_pager_strip_padding_top_bottom">5dp</dimen>
     <dimen name="activity_login_coners_radius">15dp</dimen>
     <dimen name="activity_login_linearlayout_center_margin">20dp</dimen>
     <dimen name="activity_login_tablerow_up_margin_top">10dp</dimen>
@@ -15,10 +17,17 @@
     <dimen name="activity_login_imagebutton_left">10dp</dimen>
     <dimen name="activity_lgoin_edittext_padding_left_right">5dp</dimen>
     <dimen name="activity_login_imageview_padding_left_right">5dp</dimen>
+    <dimen name="activity_quest_item_radiobutton_margin">5dp</dimen>
+    <dimen name="activity_quest_item_radiogroup_padding_left_right">5dp</dimen>
+    <dimen name="activity_album_padding">5dp</dimen>
+    <dimen name="griditem_album_padding">5dp</dimen>
+    <dimen name="griditem_album_image_height">120dp</dimen>
+    <dimen name="griditem_album_text_height">30dp</dimen>
     <dimen name="dialog_message_linearlayout_padding">10dp</dimen>
     <dimen name="dialog_message_item_padding">10dp</dimen>
-	<dimen name="dialog_message_btnbar_marin_up_down">10dp</dimen>
-	<dimen name="dialog_message_btnbar_marin_left_right">5dp</dimen>
-	<dimen name="dialog_phone_item_phone_padding">10dp</dimen>
-	<dimen name="dialog_phone_item_padding">10dp</dimen>
+    <dimen name="dialog_message_btnbar_marin_up_down">10dp</dimen>
+    <dimen name="dialog_message_btnbar_marin_left_right">5dp</dimen>
+    <dimen name="dialog_phone_item_phone_padding">10dp</dimen>
+    <dimen name="dialog_phone_item_padding">10dp</dimen>
+
 </resources>

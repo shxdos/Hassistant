@@ -23,5 +23,9 @@
     <string name="dialog_message_button_cancle">取消</string>
     <string name="dialog_message_send_successed">消息成功发送到：</string>
     <string name="dialog_message_send_no_input">消息内容不能为空</string>
+    <string name="activity_quest_radio_choose">选择题</string>
+    <string name="activity_quest_radio_answer">问答题</string>
+    <string name="activity_quest_radio_coding">编码题</string>
+    <string name="activity_quest_title_text">请答题</string>
 
 </resources>

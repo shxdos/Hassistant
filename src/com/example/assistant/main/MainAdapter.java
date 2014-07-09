@@ -12,7 +12,7 @@ public class MainAdapter extends PagerAdapter {
 	
 	public MainAdapter() {
 		super();
-		this.pagerList = pagerList;
+		this.pagerList =new ArrayList<PagerItem>();
 	}
 	/**
 	 * 添加一个Item到列表
