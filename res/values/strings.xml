@@ -7,6 +7,7 @@
     <string name="activity_login_edittext_username">请输入用户名</string>
     <string name="activity_lgoin_edittext_password">请输入密码</string>
     <string name="activity_lgoin_title_text">登入</string>
+    <string name="activity_album_title_text">学习相册</string>
     <string name="activity_main_title_text">北风助手</string>
     <string name="activity_main_view_item_quest">阶段测试</string>
     <string name="activity_main_view_item_album">学习相册</string>
