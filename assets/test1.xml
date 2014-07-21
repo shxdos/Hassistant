@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <quest
     id="0x00"
-    description="本章一共有8个章节，包括：Android项目构成、Android资源文件使用。。"
+    description="本章一种有8个章节，包括：Android项目的构成、Android资源文件的使用。。。"
     title="Android基础测试" >
 
     <choose_list>
 
         <choose
             id="0x00"
-            description="下列哪些语句关于内存回收的选项是正确的?"
-            title="下列哪些语句关于内存的选项是正确的?" >
+            description="下列哪些语句关于内存回收是正确的？"
+            title="下列哪些语句关于内存回收是正确的？" >
 
             <choice
                 description="程序员必须创建一个线程来释放内存"
@@ -20,18 +20,18 @@
                 tag="B" />
 
             <choice
-                description="回收程序允许程序员直接释放内存"
+                description="内存回收程序允许程序员直接释放内存"
                 tag="C" />
 
             <choice
-                description="内存回收程序可以再指定时间释放内存"
+                description="内存回收程序可以在指定时间释放内存"
                 tag="D" />
         </choose>
 
         <choose
             id="0x01"
-            description="下列哪些语句关于内存回收的选项是正确的?"
-            title="下列哪些语句关于内存的选项是正确的?" >
+            description="下列哪些语句关于内存回收是正确的？"
+            title="下列哪些语句关于内存回收是正确的？" >
 
             <choice
                 description="程序员必须创建一个线程来释放内存"
@@ -42,18 +42,18 @@
                 tag="B" />
 
             <choice
-                description="回收程序允许程序员直接释放内存"
+                description="内存回收程序允许程序员直接释放内存"
                 tag="C" />
 
             <choice
-                description="内存回收程序可以再指定时间释放内存"
+                description="内存回收程序可以在指定时间释放内存"
                 tag="D" />
         </choose>
 
         <choose
-            id="0x02"
-            description="下列哪些语句关于内存回收的选项是正确的?"
-            title="下列哪些语句关于内存的选项是正确的?" >
+            id="0x01"
+            description="下列哪些语句关于内存回收是正确的？"
+            title="下列哪些语句关于内存回收是正确的？" >
 
             <choice
                 description="程序员必须创建一个线程来释放内存"
@@ -64,11 +64,11 @@
                 tag="B" />
 
             <choice
-                description="回收程序允许程序员直接释放内存"
+                description="内存回收程序允许程序员直接释放内存"
                 tag="C" />
 
             <choice
-                description="内存回收程序可以再指定时间释放内存"
+                description="内存回收程序可以在指定时间释放内存"
                 tag="D" />
         </choose>
     </choose_list>

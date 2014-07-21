@@ -1,28 +1,32 @@
 package com.example.assistant.quest.choose;
 
+import com.example.assistant.model.DataChoice;
+import com.example.assistant.model.DataChoose;
+import com.example.assistant.model.DataChooseList;
+
 import com.example.hassistant.R;
 
 import android.content.Context;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
-
 import android.widget.TextView;
 
 public class ChooseAdapter extends BaseExpandableListAdapter {
 	private LayoutInflater inflater;// 布局反射器
+	private DataChooseList chooseList;
 
-	public ChooseAdapter(Context context) {
+	public ChooseAdapter(Context context, DataChooseList chooseList) {
+		this.chooseList = chooseList;
 		inflater = (LayoutInflater) context
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 	}
 
 	@Override
-	public Object getChild(int arg0, int arg1) {
+	public Object getChild(int groupPosition, int childPosition) {
 		// TODO Auto-generated method stub
-		return null;
+		return chooseList.chooses.get(groupPosition).choices.get(childPosition);
 	}
 
 	@Override
@@ -47,28 +51,28 @@ public class ChooseAdapter extends BaseExpandableListAdapter {
 			holder = (ChildViewHolder) convertView.getTag();
 
 		}
-		holder.tag.setText(""+(char) ('A' + childPosition));
-		holder.description
-				.setText("一位先生到一家吝啬的餐馆去吃饭，一个服务生端来一个盘子放到那位先生面前，先生看见盘子是湿的，便喊来服务生说：“服务员，你这个盘子是湿的！”服务生看了一眼盘子说：“先生，这是您的汤。");
+		DataChoice choice = (DataChoice) getChild(groupPosition, childPosition);
+		holder.tag.setText(choice.tag);
+		holder.description.setText(choice.description);
 		return convertView;
 	}
 
 	@Override
-	public int getChildrenCount(int arg0) {
+	public int getChildrenCount(int groupPosition) {
 		// TODO Auto-generated method stub
-		return 4;
+		return chooseList.chooses.get(groupPosition).choices.size();
 	}
 
 	@Override
-	public Object getGroup(int arg0) {
+	public Object getGroup(int groupPosition) {
 		// TODO Auto-generated method stub
-		return null;
+		return chooseList.chooses.get(groupPosition);
 	}
 
 	@Override
 	public int getGroupCount() {
 		// TODO Auto-generated method stub
-		return 20;
+		return chooseList.chooses.size();
 	}
 
 	@Override
@@ -82,8 +86,7 @@ public class ChooseAdapter extends BaseExpandableListAdapter {
 			View convertView, ViewGroup parent) {
 		GroupViewHolder holder;
 		if (null == convertView) {
-			convertView = inflater
-					.inflate(R.layout.listitem_choose, null);
+			convertView = inflater.inflate(R.layout.listitem_choose, null);
 			holder = new GroupViewHolder();
 			holder.index = (TextView) convertView.findViewById(R.id.index);
 			holder.title = (TextView) convertView.findViewById(R.id.title);
@@ -95,9 +98,10 @@ public class ChooseAdapter extends BaseExpandableListAdapter {
 			holder = (GroupViewHolder) convertView.getTag();
 
 		}
+		DataChoose choose = (DataChoose) this.getGroup(groupPosition);
 		holder.index.setText("" + (groupPosition + 1));
-		holder.title.setText("天青色等烟雨　而我在等你  月色被打捞起　晕开了结局");
-		holder.description.setText("准备年中会发言");
+		holder.title.setText(choose.title);
+		holder.description.setText(choose.description);
 		holder.answer.setText("未回答");
 		return convertView;
 	}
